@@ -1,11 +1,3 @@
-Company Logo
-Para programar a execução dos testes todos os dias às 08:00 da manhã (UTC) usando GitHub Actions, você deve alterar a configuração de cron no seu arquivo de workflow. O formato cron no GitHub Actions segue a sintaxe de cinco campos, onde o primeiro campo é para os minutos, o segundo para as horas, o terceiro para o dia do mês, o quarto para o mês e o quinto para o dia da semana.
-
-Exemplo de Configuração para Executar às 08:00 UTC
-No seu caso, você quer que os testes sejam executados todos os dias às 08:00 UTC. Você pode ajustar o campo cron assim:
-
-yaml
-Copy code
 name: Run Robot Framework Tests
 
 on:
