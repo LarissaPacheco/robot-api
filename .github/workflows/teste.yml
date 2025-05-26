@@ -1,0 +1,26 @@
+name: Run Robot Framework Tests
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Executa todos os dias às 08:00 UTC
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'  # ou a versão que você está usando
+
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt  # Certifique-se de ter um requirements.txt
+
+    - name: Run Tests
+      run: |
+        robot .  # Executa todos os testes no diretório atual
